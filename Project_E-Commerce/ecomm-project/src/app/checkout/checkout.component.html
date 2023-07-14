@@ -1,0 +1,12 @@
+<h2>Angular Stripe Gateway in Node.js & Express</h2>
+
+<button (click)="MakePayment(totalPrice)">Pay with Stripe</button>
+
+
+<div *ngIf="success">
+  <h1>You paid {{totalPrice}}. Payment is successfull</h1>
+</div>
+
+<div *ngIf="failure">
+  <h1>Payment Error</h1>
+</div>

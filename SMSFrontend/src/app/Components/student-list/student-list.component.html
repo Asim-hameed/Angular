@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <h1>Students</h1>
+  <table class="table" *ngIf="student && student.length > 0">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Department</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stud of student">
+        <td>{{ stud.id }}</td>
+        <td>{{ stud.name }}</td>
+        <td>{{ stud.email }}</td>
+        <td>{{ stud.phone }}</td>
+        <td>{{ stud.department }}</td>
+        <td><a [routerLink]="['/student', 'update', stud.id]" class="btn btn-primary">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!student || student.length <= 0">No Record found!....</p>
+</div>

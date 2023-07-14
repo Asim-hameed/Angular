@@ -1,0 +1,68 @@
+<div class="container my-5">
+  <h1 class="mb-3">Update Student</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="updateStudent()">
+        <div class="mb-3">
+          <label for="id" class="form-label">Id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id" readonly
+            name="id"
+            [(ngModel)]="updateStudentReq.id"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            [(ngModel)]="updateStudentReq.name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            [(ngModel)]="updateStudentReq.email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            name="phone"
+            [(ngModel)]="updateStudentReq.phone"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="department" class="form-label">Department</label>
+          <input
+            type="text"
+            class="form-control"
+            id="department"
+            name="department"
+            [(ngModel)]="updateStudentReq.department"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Update Record</button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          (click)="deleteStudent(updateStudentReq.id)"
+        >
+          Delete Record
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
